@@ -7,7 +7,7 @@
 declare namespace Chai {
   interface Assertion extends LanguageChains, NumericComparison, TypeComparison {
     reverted: AsyncAssertion;
-    revertedWith(reason: string): AsyncAssertion;
+    revertedWith(reason: string | RegExp): AsyncAssertion;
     emit(contract: any, eventName: string): EmitAssertion;
     properHex(length: number): void;
     hexEqual(other: string): void;
